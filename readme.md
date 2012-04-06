@@ -1,6 +1,6 @@
 # SIMPLE POWER MANAGER
 
-Copyright 2012 [Clément Sipieter](http://clement-sipieter.fr) <csipieter@gmail.com>
+Copyright 2012 - [Clément Sipieter](http://clement-sipieter.fr) \<<csipieter@gmail.com>\>
 
 
 ## LICENCE
