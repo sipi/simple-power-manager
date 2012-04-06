@@ -22,7 +22,7 @@ import std.string;
 import std.process;
 import core.thread;
 
-int bat_percent_critical = 10;
+int bat_percent_critical = 8;
 string critical_cmd = "hibernate";
 
 
@@ -137,7 +137,9 @@ main()
     {
       Thread.sleep( dur!("seconds")( 60 ) );
       
-      if(new_percent_bat < bat_percent_critical && old_percent_bat >= 10)
+      if(new_percent_bat < bat_percent_critical && old_percent_bat >= bat_percent_critical)
         system(critical_cmd);
+        
+      old_percent_bat = new_percent_bat;
     }
 }
