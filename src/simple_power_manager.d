@@ -72,7 +72,7 @@ getEnergyFull(int bat_num)
 {	  
   static int energy_full = 0;
   File f;
-	string file_path = "/sys/class/power_supply/BAT0/energy_full";
+	string file_path = "/sys/class/power_supply/BAT0/charge_full";
   char[] buf;
   
   if(energy_full == 0)
@@ -96,7 +96,7 @@ getEnergyNow(int bat_num)
 {
   int energy_now = 0;
   File f;
-	string file_path = "/sys/class/power_supply/BAT0/energy_full";
+	string file_path = "/sys/class/power_supply/BAT0/charge_now";
   char[] buf;
   
 
