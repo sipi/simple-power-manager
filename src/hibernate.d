@@ -19,9 +19,19 @@
  
 import std.stdio;
 
-void main()
+int main(string[] args)
 {
+  string sig = "mem";
+
+  if(args.length > 1) {
+    if(args[1] == "-d" || args[1] == "--disk") {
+      sig = "disk";
+    }
+  }
+
   File f = File("/sys/power/state", "w");
-  f.write("mem");
+  f.write(sig);
   f.close();
+
+  return 0;
 }
