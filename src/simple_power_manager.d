@@ -135,11 +135,13 @@ main()
   
   while(true)
     {
-      Thread.sleep( dur!("seconds")( 60 ) );
-      
+      new_percent_bat = getEnergyPercent(0);
+
       if(new_percent_bat < bat_percent_critical && old_percent_bat >= bat_percent_critical)
         system(critical_cmd);
         
       old_percent_bat = new_percent_bat;
+
+      Thread.sleep( dur!("seconds")( 60 ) );
     }
 }
