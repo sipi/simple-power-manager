@@ -33,7 +33,7 @@ atoi(char[] s)
   
   for(int i = 0;  i < s.length; ++i)
     {
-      if(!isNumeric(s[i]))
+      if(s[i] < '0' || s[i] > '9')
         break;
         
       val *= 10;
